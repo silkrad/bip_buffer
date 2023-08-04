@@ -21,7 +21,6 @@ struct bip_buffer
     int (*get_committed_size)(const bip_buffer_t *const bip_buff);
     int (*get_reservation_size)(const bip_buffer_t *const bip_buff);
     int (*get_buffer_size)(const bip_buffer_t *const bip_buff);
-    bool (*is_initialized)(const bip_buffer_t *const bip_buff);
     uint8_t *(*reserve)(bip_buffer_t *bip_buff, size_t size, size_t *reserved);
     uint8_t *(*peek)(bip_buffer_t *bip_buff, size_t *size);
     void (*commit)(bip_buffer_t *bip_buff, size_t size);
